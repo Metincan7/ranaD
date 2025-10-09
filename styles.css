@@ -630,6 +630,36 @@ img {
   box-shadow: 0 6px 28px rgba(231,111,0,0.2);
 }
 
+/* İletişim Bölümü */
+.iletisim-section {
+  padding: 80px 0;
+  background: #FFE6D2;
+  text-align: center;
+}
+
+.iletisim-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.iletisim-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.phone-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: #E76F00;
+  background: #FFFFFF;
+  padding: 20px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin-top: 16px;
+}
+
 @media (max-width: 768px) {
   .calendar-container {
     border-radius: 8px;
@@ -844,7 +874,13 @@ img {
     font-size: 14px;
   }
 
-  /* Sıkça Sorulan Sorular (SSS) bölümü için stil */
+  .phone-number {
+    font-size: 20px;
+    padding: 16px 24px;
+  }
+}
+
+/* Sıkça Sorulan Sorular (SSS) bölümü için stil */
 .sss-section {
   padding: 80px 0;
   background-color: #fff;
