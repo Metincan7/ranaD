@@ -12,7 +12,7 @@ html, body {
 body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #111111;
-  background: #e3f2fd; /* Açık mavi */
+  background: #FFE6D2;
   line-height: 1.6;
 }
 
@@ -37,9 +37,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #bbdefb; /* Daha koyu açık mavi */
-  border-bottom: 1px solid rgba(33,150,243,.08);
-  box-shadow: 0 1px 3px rgba(33,150,243,.05);
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
 }
 
 .header-inner {
@@ -81,19 +81,19 @@ img {
 }
 
 .btn-primary {
-  background: #90caf9; /* Mavi buton */
+  background: #E76F00;
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background: #64b5f6;
+  background: #B94E07;
   transform: translateY(-1px);
 }
 
 /* Hero Section */
 .hero {
-  background: #e3f2fd;
+  background: #E76F00;
   padding: 80px 0;
   min-height: 80vh;
   display: flex;
@@ -107,9 +107,55 @@ img {
   gap: 60px;
 }
 
+.hero-copy h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 16px;
+  color: #111111;
+}
+
+.hero-copy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 24px;
+  color: #111111;
+}
+
+.hero-copy p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 20px;
+  color: #111111;
+  text-align: justify;
+}
+
+.hero-visual {
+  height: 600px;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Hakkımda Section */
 .hakkimda-section {
-  background: #bbdefb;
+  background: #FFFFFF;
   padding: 80px 0;
 }
 
@@ -119,10 +165,9 @@ img {
   font-weight: 600;
   text-align: center;
   margin: 0 0 60px;
-  color: #E76F00; /* Turuncu başlık */
+  color: #111111;
 }
 
-/* Timeline */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -192,7 +237,7 @@ img {
 
 /* Çalışma Alanları Section */
 .calisma-section {
-  background: #e3f2fd;
+  background: #FFE6D2;
   padding: 80px 0;
 }
 
@@ -274,13 +319,16 @@ img {
 
 /* Terapi Nedir Section */
 .terapi-section {
-  background: #bbdefb;
+  background: #FFFFFF;
 }
 
 .banner-image {
   width: 100%;
   height: 300px;
-  background: linear-gradient(135deg, #90caf9, #64b5f6);
+  background: linear-gradient(135deg, #E76F00, #B94E07);
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,.1) 0%, transparent 50%);
   position: relative;
   overflow: hidden;
 }
@@ -339,7 +387,7 @@ img {
 
 /* Hizmetler Section */
 .hizmetler-section {
-  background: #e3f2fd;
+  background: #FFFFFF;
   padding: 80px 0;
 }
 
@@ -399,43 +447,551 @@ img {
 /* Sıkça Sorulan Sorular (SSS) bölümü için stil */
 .sss-section {
   padding: 80px 0;
-  background-color: #bbdefb;
+  background-color: #fff;
 }
 
 .sss-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 24px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.accordion-button .number {
   color: #E76F00;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.accordion-button .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.accordion-button .icon {
+  font-size: 24px;
+  color: #E76F00;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: rgba(231, 111, 0, 0.05);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 24px 0 88px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1000px;
+  padding-bottom: 24px;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Terapi Planları Bölümü */
 .planlar-section {
   padding: 80px 0;
-  background: #e3f2fd;
+  background: #fff;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.plan-item:hover {
+  transform: translateY(-4px);
+}
+
+.plan-header {
+  margin-bottom: 24px;
+}
+
+.plan-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #E76F00;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.plan-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.plan-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.plan-content p {
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* Randevu Bölümü */
 .randevu-section {
   padding: 80px 0;
-  background: #bbdefb;
+  background: #fff;
+}
+
+.randevu-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.randevu-description {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.randevu-button {
+  padding: 16px 32px;
+  font-size: 18px;
+  background: #E76F00;
+  box-shadow: 0 4px 24px rgba(231,111,0,0.15);
+}
+
+.randevu-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(231,111,0,0.2);
 }
 
 /* İletişim Bölümü */
 .iletisim-section {
   padding: 80px 0;
-  background: #e3f2fd;
+  background: #FFE6D2;
   text-align: center;
 }
 
-/* Kartlar ve kutular */
-.timeline-content,
-.plan-item,
-.service-number,
-.service-content,
-.numbered-item {
-  background: #e3f2fd;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(144,202,249,0.08);
+.iletisim-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Responsive ve diğer stiller ... (mevcut kodun altına ekleyebilirsin) */
+.iletisim-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 24px;
+}
 
-/* ...existing code... */
+.phone-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: #E76F00;
+  background: #FFFFFF;
+  padding: 20px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    border-radius: 8px;
+  }
+  
+  .calendar-container iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-container iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+    padding: 0 16px;
+  }
+  
+  .hero-inner {
+    gap: 40px;
+  }
+  
+  .hero-copy h1 {
+    font-size: 42px;
+  }
+  
+  .hero-copy h2 {
+    font-size: 28px;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
+  }
+  
+  .main-nav ul {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-copy h1 {
+    font-size: 36px;
+  }
+  
+  .hero-copy h2 {
+    font-size: 24px;
+  }
+  
+  .plan-item {
+    padding: 24px;
+  }
+  
+  .plan-header h3 {
+    font-size: 20px;
+  }
+  
+  .hero-visual {
+    height: 400px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    flex-direction: row !important;
+    padding-left: 60px;
+  }
+  
+  .timeline-marker {
+    left: 20px;
+  }
+  
+  .timeline-content {
+    width: 100%;
+  }
+  
+  .numbered-list::before {
+    left: 20px;
+  }
+  
+  .number {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .content {
+    margin-left: 60px;
+  }
+  
+  .content h3 {
+    font-size: 20px;
+  }
+  
+  .content li {
+    font-size: 15px;
+  }
+  
+  .banner-image {
+    height: 200px;
+  }
+  
+  .terapi-content {
+    padding: 40px 16px;
+  }
+  
+  .terapi-title {
+    font-size: 36px;
+  }
+  
+  .terapi-text p {
+    font-size: 16px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .service-item-wide {
+    grid-column: 1;
+  }
+  
+  .service-content h3 {
+    font-size: 24px;
+  }
+  
+  .service-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav ul {
+    gap: 16px;
+  }
+  
+  .main-nav a {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  
+  .hero-copy h1 {
+    font-size: 32px;
+  }
+  
+  .hero-copy h2 {
+    font-size: 20px;
+  }
+  
+  .hero-copy p {
+    font-size: 15px;
+  }
+  
+  .terapi-title {
+    font-size: 28px;
+  }
+  
+  .terapi-text p {
+    font-size: 15px;
+  }
+  
+  .banner-image {
+    height: 150px;
+  }
+  
+  .service-number {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .service-content h3 {
+    font-size: 20px;
+  }
+  
+  .service-content p {
+    font-size: 14px;
+  }
+
+  .phone-number {
+    font-size: 20px;
+    padding: 16px 24px;
+  }
+}
+
+/* Sıkça Sorulan Sorular (SSS) bölümü için stil */
+.sss-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.sss-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 24px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.accordion-button .number {
+  color: #E76F00;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.accordion-button .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.accordion-button .icon {
+  font-size: 24px;
+  color: #E76F00;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: rgba(231, 111, 0, 0.05);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 24px 0 88px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1000px;
+  padding-bottom: 24px;
+}
+
+.accordion-item.active .icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    padding: 20px 16px;
+  }
+  
+  .button-content {
+    gap: 16px;
+  }
+  
+  .accordion-button .number {
+    font-size: 18px;
+    min-width: 32px;
+  }
+  
+  .accordion-content {
+    padding: 0 16px 0 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+.accordion-content {
+  padding: 0 16px 0 16px;
+}
