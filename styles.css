@@ -12,7 +12,7 @@ html, body {
 body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #111111;
-  background: #FFE6D2;
+  background: #C9BFAB;
   line-height: 1.6;
 }
 
@@ -66,7 +66,7 @@ img {
 }
 
 .main-nav a:hover {
-  color: #E76F00;
+  color: #C9BFAB;
 }
 
 .btn {
@@ -81,19 +81,19 @@ img {
 }
 
 .btn-primary {
-  background: #E76F00;
+  background: #704214;
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background: #B94E07;
+  background: #5C4033;
   transform: translateY(-1px);
 }
 
 /* Hero Section */
 .hero {
-  background: #E76F00;
+  background: #C9BFAB;
   padding: 80px 0;
   min-height: 80vh;
   display: flex;
@@ -113,7 +113,7 @@ img {
   font-weight: 600;
   line-height: 1.1;
   margin: 0 0 16px;
-  color: #111111;
+  color: #704214;
 }
 
 .hero-copy h2 {
@@ -122,7 +122,7 @@ img {
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 24px;
-  color: #111111;
+  color: #704214;
 }
 
 .hero-copy p {
@@ -181,7 +181,7 @@ img {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #E76F00;
+  background: #C9BFAB;
   transform: translateX(-50%);
 }
 
@@ -207,7 +207,7 @@ img {
   transform: translate(-50%, -50%);
   width: 16px;
   height: 16px;
-  background: #E76F00;
+  background: #C9BFAB;
   border-radius: 2px;
   z-index: 2;
 }
@@ -224,7 +224,7 @@ img {
 .timeline-content h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #E76F00;
+  color: #8B7A6F;
   margin: 0 0 12px;
 }
 
@@ -237,7 +237,7 @@ img {
 
 /* Çalışma Alanları Section */
 .calisma-section {
-  background: #FFE6D2;
+  background: #C9BFAB;
   padding: 80px 0;
 }
 
@@ -254,7 +254,7 @@ img {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #E76F00;
+  background: #C9BFAB;
 }
 
 .numbered-item {
@@ -271,7 +271,7 @@ img {
   top: 0;
   width: 60px;
   height: 60px;
-  background: #E76F00;
+  background: #A67D65;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -290,8 +290,15 @@ img {
 .content h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #E76F00;
+  color: #8B7A6F;
   margin: 0 0 16px;
+}
+
+.content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #A67D65;
+  margin: 24px 0 12px;
 }
 
 .content ul {
@@ -311,7 +318,7 @@ img {
 
 .content li::before {
   content: '•';
-  color: #E76F00;
+  color: #C9BFAB;
   font-weight: bold;
   position: absolute;
   left: -16px;
@@ -325,7 +332,7 @@ img {
 .banner-image {
   width: 100%;
   height: 300px;
-  background: linear-gradient(135deg, #E76F00, #B94E07);
+  background: linear-gradient(135deg, #C9BFAB, #C9BFAB);
   background-image: 
     radial-gradient(circle at 20% 30%, rgba(255,255,255,.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 70%, rgba(255,255,255,.1) 0%, transparent 50%);
@@ -356,7 +363,7 @@ img {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   font-weight: 600;
-  color: #E76F00;
+  color: #8B7A6F;
   margin: 0 0 40px;
 }
 
@@ -387,7 +394,7 @@ img {
 
 /* Hizmetler Section */
 .hizmetler-section {
-  background: #FFFFFF;
+  background: #C9BFAB;
   padding: 80px 0;
 }
 
@@ -403,6 +410,10 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  background: #E0DCD4;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
 }
 
 .service-item-wide {
@@ -412,15 +423,15 @@ img {
 .service-number {
   width: 60px;
   height: 60px;
-  background: #FFFFFF;
-  border: 2px solid #111111;
+  background: #A67D65;
+  border: 2px solid #A67D65;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
   font-weight: 700;
-  color: #111111;
+  color: white;
   flex-shrink: 0;
 }
 
@@ -432,14 +443,14 @@ img {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
   font-weight: 600;
-  color: #111111;
+  color: #8B7A6F;
   margin: 0 0 16px;
 }
 
 .service-content p {
   font-size: 16px;
   line-height: 1.7;
-  color: #111111;
+  color: #444444;
   margin: 0;
   text-align: justify;
 }
@@ -487,7 +498,7 @@ img {
 }
 
 .accordion-button .number {
-  color: #E76F00;
+  color: #8B7A6F;
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   font-weight: 600;
@@ -503,7 +514,7 @@ img {
 
 .accordion-button .icon {
   font-size: 24px;
-  color: #E76F00;
+  color: #8B7A6F;
   transition: transform 0.3s ease;
 }
 
@@ -567,7 +578,7 @@ img {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: #E76F00;
+  background: #F5F5DC;
   color: #fff;
   border-radius: 8px;
   text-align: center;
@@ -600,7 +611,7 @@ img {
 /* Randevu Bölümü */
 .randevu-section {
   padding: 80px 0;
-  background: #fff;
+  background: #C9BFAB;
 }
 
 .randevu-content {
@@ -618,19 +629,20 @@ img {
 .randevu-button {
   padding: 16px 32px;
   font-size: 18px;
-  background: #E76F00;
-  box-shadow: 0 4px 24px rgba(231,111,0,0.15);
+  background: #704214;
+  color: white;
+  box-shadow: 0 4px 24px rgba(112,66,20,0.2);
 }
 
 .randevu-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(231,111,0,0.2);
+  box-shadow: 0 6px 28px rgba(112,66,20,0.3);
 }
 
 /* İletişim Bölümü */
 .iletisim-section {
   padding: 80px 0;
-  background: #FFE6D2;
+  background: #C9BFAB;
   text-align: center;
 }
 
@@ -648,7 +660,7 @@ img {
 .phone-number {
   font-size: 24px;
   font-weight: 600;
-  color: #E76F00;
+  color: #8B7A6F;
   background: #FFFFFF;
   padding: 20px 32px;
   border-radius: 12px;
@@ -920,7 +932,7 @@ img {
 }
 
 .accordion-button .number {
-  color: #E76F00;
+  color: #8B7A6F;
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   font-weight: 600;
@@ -936,7 +948,7 @@ img {
 
 .accordion-button .icon {
   font-size: 24px;
-  color: #E76F00;
+  color: #8B7A6F;
   transition: transform 0.3s ease;
 }
 
@@ -977,6 +989,7 @@ img {
   
   .accordion-button .number {
     font-size: 18px;
+    color: #C9BFAB;
     min-width: 32px;
   }
   
